@@ -7,5 +7,14 @@ def caesar_cipher(my_string, shift = nil)
   string = my_string.chars    #convert string into array made up on 
   #the string characters so we can use map method on them.
 
+  string.map do |char|
+    
+
+
+
+
+  end
+
+
 end
 
