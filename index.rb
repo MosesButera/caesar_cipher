@@ -23,7 +23,9 @@ def caesar_cipher(my_string, shift = nil)
         # Wrap inside 97-122
         new_ord = 97 + ((char.ord + shift - 97) % 26)
         new_ord.chr
-        
+
       end
+    else char   #Non-alphabet characters return unchanged. 
     end
+    
 end
