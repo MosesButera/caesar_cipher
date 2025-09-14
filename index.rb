@@ -1,13 +1,13 @@
 
 def caesar_cipher(my_string, shift = nil)
-  return "Please enter shift_factor" if shift_factor.nil?
+  return "Please enter shift_factor" if shift.nil?
   return "Input/my_string parameter must be a string" unless my_string.is_a?(String)
-  return "Input/shift_factor must be an Integer" unless shift_factor.is_a?(Integer)
+  return "Input/shift_factor must be an Integer" unless shift.is_a?(Integer)
 
   string = my_string.chars    #convert string into array made up on 
   #the string characters so we can use map method on them.
-
-  string.map do |char|
+  
+  result = string.map do |char|
     if char.match?(/[A-Za-z]/)   #checks if the character is an alphabet 
       #character (a-z or A-Z)
       
@@ -25,10 +25,11 @@ def caesar_cipher(my_string, shift = nil)
         new_ord.chr
 
       end
-    else char   #Non-alphabet characters return unchanged. 
+    else 
+      char   #Non-alphabet characters return unchanged. 
     end
   end
-  string.join    #Joins all the characters in an array back 
+  result.join    #Joins all the characters in an array back 
   #into one string.
 end
 
