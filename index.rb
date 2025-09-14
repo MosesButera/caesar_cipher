@@ -9,9 +9,18 @@ def caesar_cipher(my_string, shift = nil)
 
   string.map do |char|
     if char.match?(/[A-Za-z]/)   #checks if the character is an alphabet 
-    
+      #character (a-z or A-Z)
+      
+      #Key pattern that solves the circular calendar wheel. 
+      #Very cool :)
 
+      if char.ord.between?(65, 90)  # Uppercase A-Z
+        # Wrap inside 65-90
+        new_ord = 65 + ((char.ord + shift - 65) % 26)
+        new_ord.chr
 
+      end
+  
   end
 
 end
