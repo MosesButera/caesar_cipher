@@ -19,9 +19,11 @@ def caesar_cipher(my_string, shift = nil)
         new_ord = 65 + ((char.ord + shift - 65) % 26)
         new_ord.chr
 
+      elsif char.ord.between?(97, 122) # Lowercase a-z
+        # Wrap inside 97-122
+        new_ord = 97 + ((char.ord + shift - 97) % 26)
+        new_ord.chr
+        
       end
-  
-  end
-
+    end
 end
-
