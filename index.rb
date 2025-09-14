@@ -8,13 +8,11 @@ def caesar_cipher(my_string, shift = nil)
   #the string characters so we can use map method on them.
 
   string.map do |char|
+    if char.match?(/[A-Za-z]/)   #checks if the character is an alphabet 
     
 
 
-
-
   end
-
 
 end
 
