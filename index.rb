@@ -27,5 +27,9 @@ def caesar_cipher(my_string, shift = nil)
       end
     else char   #Non-alphabet characters return unchanged. 
     end
-    
+  end
+  string.join    #Joins all the characters in an array back 
+  #into one string.
 end
+
+caesar_cipher("a", 100)
